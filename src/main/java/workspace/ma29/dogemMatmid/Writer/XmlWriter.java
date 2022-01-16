@@ -1,15 +1,17 @@
-package workspace.m.gA.Writer;
+package workspace.ma29.dogemMatmid.Writer;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-
-public class JsonWriter<T> extends FileWriter {
+public class XmlWriter<T> extends FileWriter{
     private ObjectMapper objectMapper;
     private static final String fileName = "json_file";
     private static final int recordPerFile = 250;
-    public JsonWriter(ArrayList<T> data, String writeTo) {
+
+    public XmlWriter(ArrayList<T> data, String writeTo) {
         super(data, writeTo);
         this.objectMapper = new ObjectMapper();
     }
@@ -19,11 +21,11 @@ public class JsonWriter<T> extends FileWriter {
         try {
             int i = 0;
             for (; i < this.data.size() / recordPerFile; i++) {
-                this.objectMapper.writeValue(new java.io.FileWriter(this.writeTo + fileName + i + ".json"),
+                this.objectMapper.writeValue(new java.io.FileWriter(this.writeTo + fileName + i + ".xml"),
                         Arrays.copyOfRange(this.data.toArray(), i * recordPerFile , (i + 1) * recordPerFile));
             }
             if (this.data.size() % recordPerFile != 0) {
-                this.objectMapper.writeValue(new java.io.FileWriter(this.writeTo + fileName + i + ".json"),
+                this.objectMapper.writeValue(new java.io.FileWriter(this.writeTo + fileName + i + ".xml"),
                         Arrays.copyOfRange(this.data.toArray(), i * recordPerFile , this.data.size()));
             }
 

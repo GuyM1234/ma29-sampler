@@ -1,4 +1,4 @@
-package workspace.m.gA.DataStructures;
+package workspace.ma29.dogemMatmid.DataStructures;
 
 public class ReportData extends Data{
     private String mdaCODE;

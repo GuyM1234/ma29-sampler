@@ -1,6 +1,6 @@
-package workspace.m.gA.Reader;
+package workspace.ma29.dogemMatmid.Reader;
 
-import workspace.m.gA.DataStructures.ReportData;
+import workspace.ma29.dogemMatmid.DataStructures.ReportData;
 import org.apache.commons.csv.CSVRecord;
 
 public class ReportsCsvReader extends CsvReader<ReportData> {

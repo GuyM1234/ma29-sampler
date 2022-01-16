@@ -1,8 +1,8 @@
-package workspace.m.gA.Reader;
+package workspace.ma29.dogemMatmid.Reader;
 
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
-import workspace.m.gA.DataStructures.Data;
+import workspace.ma29.dogemMatmid.DataStructures.Data;
 import org.apache.commons.csv.CSVFormat;
 
 import java.io.IOException;

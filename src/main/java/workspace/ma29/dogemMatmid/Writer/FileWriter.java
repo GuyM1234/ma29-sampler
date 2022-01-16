@@ -1,6 +1,4 @@
-package workspace.m.gA.Writer;
-
-import workspace.m.gA.DataStructures.Data;
+package workspace.ma29.dogemMatmid.Writer;
 
 import java.util.ArrayList;
 

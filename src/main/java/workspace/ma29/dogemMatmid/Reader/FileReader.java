@@ -1,4 +1,4 @@
-package workspace.m.gA.Reader;
+package workspace.ma29.dogemMatmid.Reader;
 
 import java.io.FileNotFoundException;
 
