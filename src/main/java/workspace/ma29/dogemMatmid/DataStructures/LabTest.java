@@ -1,5 +1,9 @@
 package workspace.ma29.dogemMatmid.DataStructures;
 
+import health_care_provider.HealthCareInfoProvider;
+import health_care_provider.errors.InvalidIdException;
+import health_care_provider.models.PersonInsured;
+
 public class LabTest extends Data{
     private String idNum;
     private String idType;
@@ -32,9 +36,17 @@ public class LabTest extends Data{
     }
 
     public void setHealthData() {
-
+        HealthCareInfoProvider healthCareInfoProvider = new HealthCareInfoProvider();
+        try {
+            PersonInsured person = healthCareInfoProvider.fetchInfo(Integer.parseInt(this.idNum), Integer.parseInt(this.idType));
+            this.joinDate = String.valueOf(person.getJoinDate());
+            this.healthCardId = String.valueOf(person.getHealthCareId());
+            this.healthCareName =  person.getHealthCareName();
+        } catch (Exception e) {
+            System.out.println(this.idNum + " has invalid input");
+        }
     }
-    
+
     public String getIdNum() {
         return idNum;
     }

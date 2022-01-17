@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>GA</artifactId>
+    <artifactId>ma29-sampler</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>

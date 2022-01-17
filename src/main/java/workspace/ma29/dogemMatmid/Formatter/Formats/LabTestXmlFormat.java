@@ -1,11 +1,10 @@
-package workspace.ma29.dogemMatmid.Formats;
+package workspace.ma29.dogemMatmid.Formatter.Formats;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import workspace.ma29.dogemMatmid.DataStructures.Data;
 
-import java.util.ArrayList;
 @JacksonXmlRootElement(localName = "LabTests")
 public class LabTestXmlFormat<T extends Data> extends BaseFormat {
     @JacksonXmlElementWrapper(useWrapping = false)
