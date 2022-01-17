@@ -1,6 +1,6 @@
 package workspace.ma29.dogemMatmid.DataStructures;
 
-public class ReportData extends Data{
+public class Report extends Data{
     private String mdaCODE;
     private String idNum;
     private String idType;
@@ -15,8 +15,8 @@ public class ReportData extends Data{
     private String takeDate;
     private String resultDate;
 
-    public ReportData(String mdaCODE, String idNum, String idType, String firstName, String lastName,
-                      String city, String street, String buildingNumber, String barcode, String getDate, String takeDate, String resultDate) {
+    public Report(String mdaCODE, String idNum, String idType, String firstName, String lastName,
+                  String city, String street, String buildingNumber, String barcode, String getDate, String takeDate, String resultDate) {
         this.mdaCODE = mdaCODE;
         this.idNum = idNum;
         this.idType = idType;
