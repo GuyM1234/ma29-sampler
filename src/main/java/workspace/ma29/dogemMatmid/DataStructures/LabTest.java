@@ -1,7 +1,6 @@
 package workspace.ma29.dogemMatmid.DataStructures;
 
 import health_care_provider.HealthCareInfoProvider;
-import health_care_provider.errors.InvalidIdException;
 import health_care_provider.models.PersonInsured;
 
 public class LabTest extends Data{
