@@ -14,4 +14,13 @@ public class ReportsCsvReader extends CsvReader<Report> {
         return new Report(record.get(0),record.get(1),record.get(2),record.get(3),record.get(4),record.get(5),record.get(6),
                 record.get(7),record.get(8),record.get(9),record.get(10),record.get(11));
     }
+
+    @Override
+    public boolean isUnique(CSVRecord record) {
+        if (this.uniqueKey.contains(record.get(8))) {
+            return false;
+        }
+        this.uniqueKey.add(record.get(8));
+        return true;
+    }
 }

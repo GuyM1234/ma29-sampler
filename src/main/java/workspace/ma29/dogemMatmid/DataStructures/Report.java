@@ -4,7 +4,6 @@ public class Report extends Data{
     private String mdaCODE;
     private String idNum;
     private String idType;
-//    private String supplierCode;
     private String firstName;
     private String lastName;
     private String city;
@@ -20,7 +19,6 @@ public class Report extends Data{
         this.mdaCODE = mdaCODE;
         this.idNum = idNum;
         this.idType = idType;
-//        this.supplierCode = supplierCode;
         this.firstName = firstName;
         this.lastName = lastName;
         this.city = city;
@@ -55,14 +53,6 @@ public class Report extends Data{
     public void setIdType(String idType) {
         this.idType = idType;
     }
-
-//    public String getSupplierCode() {
-//        return supplierCode;
-//    }
-//
-//    public void setSupplierCode(String supplierCode) {
-//        this.supplierCode = supplierCode;
-//    }
 
     public String getFirstName() {
         return firstName;
