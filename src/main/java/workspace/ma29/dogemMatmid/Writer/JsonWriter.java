@@ -8,8 +8,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 
-public class JsonWriter extends FileWriter<JsonFormat> {
-    private ObjectMapper objectMapper;
+public class JsonWriter extends FileWriter {
     private static final String fileType = ".json";
     private static final int recordPerFile = 250;
 
@@ -18,30 +17,7 @@ public class JsonWriter extends FileWriter<JsonFormat> {
     }
 
     @Override
-    public JsonFormat formatData(Object[] data) {
+    public BaseFormat formatData(Object[] data) {
         return new JsonFormat(data);
     }
-
-    //    public JsonWriter(ArrayList<T> data, String writeTo) {
-//        super(data, writeTo);
-//        this.objectMapper = new ObjectMapper();
-//    }
-
-//    @Override
-//    public void write() {
-//        try {
-//            int i = 0;
-//            for (; i < this.data.size() / this.recordPerFile; i++) {
-//                this.objectMapper.writeValue(new java.io.FileWriter(this.writeTo + i + fileType),
-//                        Arrays.copyOfRange(this.data.toArray(), i * this.recordPerFile , (i + 1) * this.recordPerFile));
-//            }
-//            if (this.data.size() % recordPerFile != 0) {
-//                this.objectMapper.writeValue(new java.io.FileWriter(this.writeTo + i + fileType),
-//                        Arrays.copyOfRange(this.data.toArray(), i * this.recordPerFile , this.data.size()));
-//            }
-//
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
 }

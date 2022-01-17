@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public abstract class FileWriter<T extends BaseFormat> extends Writer {
+public abstract class FileWriter extends Writer {
     protected String writeTo;
     protected ObjectMapper objectMapper;
     protected String fileType;
@@ -21,7 +21,7 @@ public abstract class FileWriter<T extends BaseFormat> extends Writer {
         this.recordPerFile = recordPerFile;
     }
 
-    public abstract T formatData(Object[] data);
+    public abstract BaseFormat formatData(Object[] data);
 
     @Override
     public void write() {
@@ -43,6 +43,4 @@ public abstract class FileWriter<T extends BaseFormat> extends Writer {
     private Object[] arrayRange(int i) {
         return Arrays.copyOfRange(this.data.toArray(), i * this.recordPerFile , (i + 1) * this.recordPerFile);
     }
-
-
 }

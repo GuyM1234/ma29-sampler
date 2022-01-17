@@ -6,7 +6,7 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import workspace.ma29.dogemMatmid.DataStructures.Data;
 
 @JacksonXmlRootElement(localName = "LabTests")
-public class LabTestXmlFormat<T extends Data> extends BaseFormat {
+public class LabTestXmlFormat extends BaseFormat {
     @JacksonXmlElementWrapper(useWrapping = false)
     @JacksonXmlProperty(localName = "LabTest")
     Object[] data;
