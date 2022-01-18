@@ -1,20 +1,19 @@
-package workspace.ma29.dogemMatmid.Writer.RecordsPerFileCalcs;
+package workspace.ma29.dogemMatmid.Writer;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import workspace.ma29.dogemMatmid.Formatter.Formats.BaseFormat;
 
-public class RecordsNumByFileSizeLimit extends RecordsNum{
+import java.util.ArrayList;
+
+public abstract class SizeFileWriter extends FileWriter{
     private double sizeInMb;
-    private Object[] data;
-    private ObjectMapper objectMapper;
     private static final int bytesToMbMult = 1000000;
 
-    public RecordsNumByFileSizeLimit(double sizeInMb, Object[] data, ObjectMapper objectMapper) {
+    public SizeFileWriter(ArrayList data, String writeTo, ObjectMapper objectMapper, String fileType, double sizeInMb) {
+        super(data, writeTo, objectMapper, fileType);
         this.sizeInMb = sizeInMb;
-        this.data = data;
-        this.objectMapper = objectMapper;
     }
-
 
     @Override
     public int getRecordsNumber() {
@@ -24,7 +23,7 @@ public class RecordsNumByFileSizeLimit extends RecordsNum{
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
-        double avgSize = sizeInBytes / bytesToMbMult / this.data.length;
+        double avgSize = sizeInBytes / bytesToMbMult / this.data.size();
         return (int) (this.sizeInMb / avgSize);
     }
 }
