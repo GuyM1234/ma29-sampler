@@ -2,6 +2,7 @@ package workspace.ma29.dogemMatmid.Writer;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import workspace.ma29.dogemMatmid.Formatter.Formats.BaseFormat;
+import workspace.ma29.dogemMatmid.Writer.RecordsPerFileCalcs.RecordsNum;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -13,12 +14,12 @@ public abstract class FileWriter extends Writer {
     protected String fileType;
     protected int recordPerFile;
 
-    public FileWriter(ArrayList data, String writeTo, ObjectMapper objectMapper, String fileType, int recordPerFile) {
+    public FileWriter(ArrayList data, String writeTo, ObjectMapper objectMapper, String fileType, RecordsNum recordsNum) {
         super(data);
         this.writeTo = writeTo;
         this.objectMapper = objectMapper;
         this.fileType = fileType;
-        this.recordPerFile = recordPerFile;
+        this.recordPerFile = recordsNum.getRecordsNumber();
     }
 
     public abstract BaseFormat formatData(Object[] data);
