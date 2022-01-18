@@ -1,18 +1,9 @@
 package workspace.ma29.dogemMatmid;
 
-import workspace.ma29.dogemMatmid.DataStructures.LabTest;
 import workspace.ma29.dogemMatmid.DataStructures.LabTestSerology;
-import workspace.ma29.dogemMatmid.DataStructures.PositivePerson;
-import workspace.ma29.dogemMatmid.DataStructures.Report;
 import workspace.ma29.dogemMatmid.DataTransfomation.LabTestSerologyUtil;
-import workspace.ma29.dogemMatmid.DataTransfomation.PositiveCoronaBuilder;
-import workspace.ma29.dogemMatmid.DataTransfomation.TransformLabTestsUtil;
 import workspace.ma29.dogemMatmid.Reader.LabTestSerologyCsvReader;
-import workspace.ma29.dogemMatmid.Writer.Formatter.LabTestXmlFormatter;
-import workspace.ma29.dogemMatmid.Reader.LabTestsCsvReader;
-import workspace.ma29.dogemMatmid.Reader.ReportsCsvReader;
-import workspace.ma29.dogemMatmid.Writer.json.JsonFileSizeWriter;
-import workspace.ma29.dogemMatmid.Writer.xml.XmlNumberRecordsWriter;
+import workspace.ma29.dogemMatmid.Writer.db.DBWriter;
 
 import java.util.ArrayList;
 
@@ -40,6 +31,6 @@ public class Main {
 
         LabTestSerologyUtil u = new LabTestSerologyUtil();
         u.updateKits(labTestSerologies);
-
+//        DBWriter dbWriter = new DBWriter(labTestSerologies);
     }
 }

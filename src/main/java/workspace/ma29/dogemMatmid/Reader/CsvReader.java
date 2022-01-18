@@ -12,6 +12,7 @@ import java.util.HashSet;
 
 public abstract class CsvReader<T extends Data> extends FileReader {
     protected HashSet<String> uniqueKey;
+
     public CsvReader(String path) {
         super(path);
         this.uniqueKey = new HashSet<String>();
