@@ -3,7 +3,7 @@ package workspace.ma29.dogemMatmid.Reader;
 import java.io.FileNotFoundException;
 
 public abstract class FileReader extends Reader {
-    private String path;
+    protected String path;
 
     public FileReader(String path) {
         this.path = path;

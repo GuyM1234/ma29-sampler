@@ -66,6 +66,10 @@ public class LabTestSerology extends Data{
         return kitNumber;
     }
 
+    public void setKitNumber(String kitNumber) {
+        this.kitNumber = kitNumber;
+    }
+
     @Override
     public String toString() {
         return "LabTestSerology{" +

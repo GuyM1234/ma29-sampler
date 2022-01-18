@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import java.util.HashSet;
 
 public abstract class CsvReader<T extends Data> extends FileReader {
-
     protected HashSet<String> uniqueKey;
     public CsvReader(String path) {
         super(path);
@@ -33,7 +32,7 @@ public abstract class CsvReader<T extends Data> extends FileReader {
                 }
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Path not found: " + this.path);
         }
         return data;
     }

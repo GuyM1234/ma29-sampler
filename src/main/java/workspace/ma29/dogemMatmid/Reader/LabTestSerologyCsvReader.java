@@ -1,7 +1,6 @@
 package workspace.ma29.dogemMatmid.Reader;
 
 import org.apache.commons.csv.CSVRecord;
-import workspace.ma29.dogemMatmid.DataStructures.LabTest;
 import workspace.ma29.dogemMatmid.DataStructures.LabTestSerology;
 
 public class LabTestSerologyCsvReader extends CsvReader<LabTestSerology> {
@@ -32,10 +31,12 @@ public class LabTestSerologyCsvReader extends CsvReader<LabTestSerology> {
         }
         try {
             Integer.parseInt(String.valueOf(record.get(6).charAt(2)));
+            return false;
+        } catch (NumberFormatException e) {}
+        try {
             Integer.parseInt(String.valueOf(record.get(6).charAt(3)));
             return false;
         } catch (NumberFormatException e) {}
-
         this.uniqueKey.add(record.get(0));
         return true;
     }
