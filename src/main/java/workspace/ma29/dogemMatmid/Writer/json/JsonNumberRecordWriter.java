@@ -1,7 +1,8 @@
-package workspace.ma29.dogemMatmid.Writer;
+package workspace.ma29.dogemMatmid.Writer.json;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import workspace.ma29.dogemMatmid.Formatter.Formats.BaseFormat;
 import workspace.ma29.dogemMatmid.Formatter.Formats.JsonFormat;
+import workspace.ma29.dogemMatmid.Writer.FileWriter.NumberRecordsFileWriter;
 
 import java.util.ArrayList;
 

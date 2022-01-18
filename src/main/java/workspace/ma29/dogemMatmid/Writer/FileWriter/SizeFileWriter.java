@@ -1,12 +1,12 @@
-package workspace.ma29.dogemMatmid.Writer;
+package workspace.ma29.dogemMatmid.Writer.FileWriter;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import workspace.ma29.dogemMatmid.Formatter.Formats.BaseFormat;
+import workspace.ma29.dogemMatmid.Writer.FileWriter.FileWriter;
 
 import java.util.ArrayList;
 
-public abstract class SizeFileWriter extends FileWriter{
+public abstract class SizeFileWriter extends FileWriter {
     private double sizeInMb;
     private static final int bytesToMbMult = 1000000;
 
