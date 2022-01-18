@@ -132,7 +132,6 @@ public class Report extends Data{
                 "mdaCODE='" + mdaCODE + '\'' +
                 ", idNum='" + idNum + '\'' +
                 ", idType='" + idType + '\'' +
-//                ", supplierCode='" + supplierCode + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", city='" + city + '\'' +

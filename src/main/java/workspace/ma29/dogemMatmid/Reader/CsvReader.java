@@ -1,6 +1,4 @@
 package workspace.ma29.dogemMatmid.Reader;
-
-import com.ctc.wstx.exc.WstxOutputException;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 import workspace.ma29.dogemMatmid.DataStructures.Data;
