@@ -5,7 +5,7 @@ import workspace.ma29.dogemMatmid.DataStructures.PositivePerson;
 import workspace.ma29.dogemMatmid.DataStructures.Report;
 import workspace.ma29.dogemMatmid.DataTransfomation.PositiveCoronaBuilder;
 import workspace.ma29.dogemMatmid.DataTransfomation.TransformLabTestsUtil;
-import workspace.ma29.dogemMatmid.Formatter.LabTestXmlFormatter;
+import workspace.ma29.dogemMatmid.Writer.Formatter.LabTestXmlFormatter;
 import workspace.ma29.dogemMatmid.Reader.LabTestsCsvReader;
 import workspace.ma29.dogemMatmid.Reader.ReportsCsvReader;
 import workspace.ma29.dogemMatmid.Writer.json.JsonFileSizeWriter;

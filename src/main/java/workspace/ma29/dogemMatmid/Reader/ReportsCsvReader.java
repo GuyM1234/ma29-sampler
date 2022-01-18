@@ -16,7 +16,7 @@ public class ReportsCsvReader extends CsvReader<Report> {
     }
 
     @Override
-    public boolean isUnique(CSVRecord record) {
+    public boolean validate(CSVRecord record) {
         if (this.uniqueKey.contains(record.get(8))) {
             return false;
         }

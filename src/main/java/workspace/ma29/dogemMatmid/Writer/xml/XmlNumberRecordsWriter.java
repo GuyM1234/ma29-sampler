@@ -1,7 +1,7 @@
 package workspace.ma29.dogemMatmid.Writer.xml;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
-import workspace.ma29.dogemMatmid.Formatter.Formats.BaseFormat;
-import workspace.ma29.dogemMatmid.Formatter.Formatter;
+import workspace.ma29.dogemMatmid.Writer.Formatter.Formats.BaseFormat;
+import workspace.ma29.dogemMatmid.Writer.Formatter.Formatter;
 import workspace.ma29.dogemMatmid.Writer.FileWriter.NumberRecordsFileWriter;
 
 import java.util.ArrayList;

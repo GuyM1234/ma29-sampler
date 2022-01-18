@@ -1,4 +1,4 @@
-package workspace.ma29.dogemMatmid.Formatter.Formats;
+package workspace.ma29.dogemMatmid.Writer.Formatter.Formats;
 
 
 public class JsonFormat extends BaseFormat {

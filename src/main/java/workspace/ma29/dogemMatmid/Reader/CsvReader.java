@@ -20,7 +20,7 @@ public abstract class CsvReader<T extends Data> extends FileReader {
 
     public abstract T readRecordToData(CSVRecord record);
 
-    public abstract boolean isUnique(CSVRecord record);
+    public abstract boolean validate(CSVRecord record);
 
     @Override
     public ArrayList<T> read() {
@@ -28,7 +28,7 @@ public abstract class CsvReader<T extends Data> extends FileReader {
         try {
             CSVParser records = CSVFormat.DEFAULT.parse(super.getFile());
             for (CSVRecord record : records) {
-                if (this.isUnique(record)) {
+                if (this.validate(record)) {
                     data.add(readRecordToData(record));
                 }
             }

@@ -1,6 +1,6 @@
-package workspace.ma29.dogemMatmid.Formatter;
+package workspace.ma29.dogemMatmid.Writer.Formatter;
 
-import workspace.ma29.dogemMatmid.Formatter.Formats.LabTestXmlFormat;
+import workspace.ma29.dogemMatmid.Writer.Formatter.Formats.LabTestXmlFormat;
 
 public class LabTestXmlFormatter extends Formatter<LabTestXmlFormat>{
     @Override

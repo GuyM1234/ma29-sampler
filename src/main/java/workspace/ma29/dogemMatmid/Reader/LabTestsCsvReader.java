@@ -16,7 +16,7 @@ public class LabTestsCsvReader extends CsvReader<LabTest> {
     }
 
     @Override
-    public boolean isUnique(CSVRecord record) {
+    public boolean validate(CSVRecord record) {
         if (this.uniqueKey.contains(record.get(7))) {
             return false;
         }
